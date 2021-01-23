@@ -1,5 +1,4 @@
-/*write a program which create student structure which accept student
-roll no, student name , address, subject marks, percentage and display
+/*write a program which create student structure which accept student roll no, student name , address, subject marks, percentage and It's Grade and display
 same on screen.*/
 
 #include<stdio.h>
