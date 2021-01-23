@@ -3,7 +3,7 @@ roll no, student name , address, subject marks, percentage and display
 same on screen.*/
 
 #include<stdio.h>
-struct data
+struct student
 {
     int roll_no;
     char nm[40];
@@ -18,7 +18,7 @@ int main()
 
     printf("\n Enter Student Roll no. : ");
     scanf("%d", &stu1.roll_no);
-    
+
     getchar();
     printf("\n Enter Student Name : ");
     fgets(stu1.nm,sizeof(stu1.nm),stdin);
@@ -27,10 +27,7 @@ int main()
     fgets(stu1.add, sizeof(stu1.add),stdin);
 
     printf("\n Enter Student marks : ");
-    scanf("%d",&stu1.marks);
-
-    printf("\n Enter Student Percantage : ");
-    scanf("%f",&stu1.percentage);
+    scanf("%d %d %d %d %d",&stu1.sub1 , &stu1.sub2 , &stu1.sub3 , &stu1.sub4 , &stu1.sub5);
 
     printf("\t\t\t\t\t\t ~~~~~~Student Details~~~~~~ : \n");
 
@@ -40,27 +37,28 @@ int main()
 
     printf("\n Address : %s",stu1.add);
 
-    printf("\n Student Marks : %d \n",stu1.sub1 , sut1.sub2 , stu1.sub3 , stu1.sub4 , stu1.sub5);
-    
-    stu1.total = stu1.sub1 + stu1.sub2 + stu1.sub3 + stu1.sub4 + stu1.sub5 ;
+    stu1.total_marks = stu1.sub1 + stu1.sub2 + stu1.sub3 + stu1.sub4 + stu1.sub5 ;
     stu1.percentage = (stu1.total_marks / 500.0 ) * 100.0;
 
-    printf("\n Student Total Marks : %d \n", sut1.total_marks);
-    printf("\n Student Percentage : %.2f \n",stu1.percentage);
+    printf("\n Student 5 subject marks : %d %d %d %d %d \n" ,stu1.sub1 , stu1.sub2 , stu1.sub3 , stu1.sub4 , stu1.sub5);
+
+    printf("\n Student Total Marks : %d \n", stu1.total_marks);
     
-    if (per > 90 ){
+    printf("\n Student Percentage : %.2f \n", stu1.percentage);
+
+    if (stu1.percentage > 90 ){
       printf("\n Grade 'A'\n");
     }
-    else if (per > 80 ){
+    else if (stu1.percentage > 80 ){
       printf("\n Grade 'B'\n");
     }
-    else if (per > 70 ){
+    else if (stu1.percentage > 70 ){
       printf("\n Grade 'C'\n");
     }
-    else if (per > 60 ){
+    else if (stu1.percentage > 60 ){
       printf("\n Grade 'D'\n");
     }
-    else if (per > 50 ){
+    else if (stu1.percentage > 50 ){
       printf("\n Grade 'E'\n");
     }
     else {
